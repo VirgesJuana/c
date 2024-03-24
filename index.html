@@ -7,23 +7,34 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4; /* Cor de fundo */
+            font-family: Arial, sans-serif;
         }
 
         a {
             text-decoration: none;
+            color: #fff; /* Cor do link */
         }
 
         .box {
-            font-size: 20px;
-            color: white;
+            font-size: 24px;
+            color: #333; /* Cor do texto */
             height: 250px;
             width: 350px;
             border-radius: 10px;
-            background: #191919;
-            flex-direction: column;
+            background: #007bff; /* Cor de fundo da caixa */
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+
+        .box p {
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #fff; /* Cor do texto */
         }
 
         .buttons-container {
@@ -34,18 +45,26 @@
         }
 
         button {
-            height: 30px;
-            width: 50px;
-            background: white;
+            height: 40px;
+            width: 80px;
+            background: #fff; /* Cor de fundo do botão */
+            border: 1px solid #007bff; /* Cor da borda */
             border-radius: 5px;
-            color: blue;
-            font-weight: 600;
+            color: #007bff; /* Cor do texto do botão */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #007bff; /* Cor de fundo ao passar o mouse */
+            color: #fff; /* Cor do texto ao passar o mouse */
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <p>C*zinho hj?</p>
+        <p>C*zinho hoje?</p>
         <div class="buttons-container">
             <button>
                 <a href="https://pumplover.github.io/agendar/">Sim</a>
@@ -55,8 +74,8 @@
     </div>
     <script>
         let button = document.getElementById('no');
-        let height = window.innerHeight - 50;
-        let width = window.innerWidth - 50;
+        let height = window.innerHeight - 90;
+        let width = window.innerWidth - 90;
 
         button.addEventListener('mouseover', function() {
             button.style.position = "absolute";
